@@ -1,4 +1,6 @@
 .weather-block {
+  text-align: center;
+  font-weight: 300;
   color: antiquewhite;
 
   &__descr {
@@ -8,16 +10,78 @@
   &__icon {
     margin-left: -15%;
   }
-
-  &__t {
-    font-size: 30px;
-  }
 }
+
+.degrees {
+  display: block;
+  position: relative;
+  margin: 20% 0 5% 0;
+
+  color: #4F787D;
+  text-indent: -5px;
+  font-size: 70px;
+  font-weight: bold;
+  
+  animation: degreesAnimation 20s ease infinite;
+  -webkit-animation: degreesAnimation 20s linear infinite;
+}
+
+@keyframes degreesAnimation {
+    32% { color: #4F787D; }
+    33% { color: #a8ddff; }
+    62% { color: #a8ddff; }
+    63% { color: #fff5b8; }
+    99% { color: #fff5b8; }
+}
+
+@-webkit-keyframes degreesAnimation {
+    32% { color: #4F787D; }
+    33% { color: #a8ddff; }
+    62% { color: #a8ddff; }
+    63% { color: #fff5b8; }
+    99% { color: #fff5b8; }
+}
+
+.degrees span {
+  font-size: 50px;
+  position: absolute;
+  top: 0;
+}
+
+.place {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #694c6d;
+  animation: placeAnimation 20s ease infinite;
+  -webkit-animation: placeAnimation 20s linear infinite;
+}
+
+@keyframes placeAnimation {
+  32% { color: #694c6d; }
+  33% { color: #4497bf; }
+  62% { color: #4497bf; }
+  63% { color: #f7a526; }
+  99% { color: #f7a526; }
+}
+
+@-webkit-keyframes placeAnimation {
+  32% { color: #694c6d; }
+  33% { color: #4497bf; }
+  62% { color: #4497bf; }
+  63% { color: #f7a526; }
+  99% { color: #f7a526; }
+}
+
+.weather {
+  color: #FFF;
+}
+
+
 
 /* SUNNY */
 .sunny { 
   animation: sunny 15s linear infinite;
-  background: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%); 
+  // background: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%); 
   height: 140px;
   width: 20px; 
   margin-left: -15px;
@@ -26,7 +90,7 @@
   top: 20px;
 }
 .sunny:before {
-  background: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+  // background: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
   content: ''; 
   height: 140px; 
   width: 20px;

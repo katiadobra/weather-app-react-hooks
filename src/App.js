@@ -19,31 +19,13 @@ function App() {
       .then(res => res.json())
       .then(data => data)
 
-      let descr = apiData.weather[0].description;
-      let weatherIcon = '';
-
-      if (descr.includes('sun')) {
-        weatherIcon = 'sunny';
-      } else if (descr.includes('clouds')) {
-        weatherIcon = 'cloudy';
-      } else if (descr.includes('rain')) {
-        weatherIcon = 'rainy';
-      } else if (descr.includes('starry')) {
-        weatherIcon = 'starry';
-      } else if (descr.includes('snow')) {
-        weatherIcon = 'snowy';
-      } else if (descr.includes('storm')) {
-        weatherIcon = 'stormy';
-      }
-
       if (city && country) {
         setWeather({
           data: apiData,
-          city: apiData.city,
+          city: apiData.name,
           country: apiData.sys.country,
           description: apiData.weather[0].description,
           temperature: Math.round(apiData.main.temp),
-          icon: weatherIcon,
           error: ""
         })
       } else {
@@ -53,7 +35,6 @@ function App() {
           country: '',
           description: '',
           temperature: '',
-          icon: '',
           error: "Please type a city and country"
         })
       }
