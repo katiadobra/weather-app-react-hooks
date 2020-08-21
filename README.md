@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+![Image](https://github.com/katiadobra/weather-app-react-hooks/blob/master/src/assets/weather.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
